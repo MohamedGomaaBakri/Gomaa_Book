@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gomaabook/features/home/presentation/views/widgets/custom_listview_item.dart';
 
-class HomeViewBody extends StatelessWidget {
-  const HomeViewBody({super.key});
+class HorizontalListView extends StatelessWidget {
+  const HorizontalListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            padding: EdgeInsets.only(right: 16),
             child: ListViewItem(),
           );
         },

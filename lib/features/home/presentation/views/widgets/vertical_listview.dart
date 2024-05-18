@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gomaabook/core/utils/assets.dart';
+import 'package:gomaabook/features/home/presentation/views/widgets/vertical_listview_item.dart';
 
 class VerticalListView extends StatelessWidget {
   const VerticalListView({super.key});
@@ -7,24 +7,14 @@ class VerticalListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      padding: EdgeInsets.zero,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 10,
       itemBuilder: (context, index) {
-        return const Row(
-          children: [
-            Image(
-              height: 150,
-              width: 100,
-              image: AssetImage(AssetsData.testImage),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  'Harry Potter and The Goblet of fire ',
-                  style: TextStyle(),
-                )
-              ],
-            )
-          ],
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 10),
+          child: VerticalListViewItem(),
         );
       },
     );

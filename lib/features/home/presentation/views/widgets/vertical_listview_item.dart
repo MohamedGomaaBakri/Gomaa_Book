@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:gomaabook/core/utils/assets.dart';
 import 'package:gomaabook/features/home/presentation/views/widgets/book_detailed_view.dart';
+import 'package:gomaabook/features/home/presentation/views/widgets/rating_widget.dart';
 
 class VerticalListViewItem extends StatelessWidget {
   const VerticalListViewItem({super.key});
@@ -72,29 +73,7 @@ class VerticalListViewItem extends StatelessWidget {
                         ),
                       ),
                       Spacer(),
-                      Icon(
-                        Icons.star_rate,
-                        color: Colors.yellow,
-                        size: 30,
-                      ),
-                      SizedBox(
-                        width: 6.3,
-                      ),
-                      Text(
-                        '4.8',
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        '(564)',
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
-                      ),
+                      RatingWidget(),
                     ],
                   ),
                 ],

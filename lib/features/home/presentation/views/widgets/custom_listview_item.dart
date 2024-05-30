@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gomaabook/core/utils/assets.dart';
 
 class ListViewItem extends StatelessWidget {
-  const ListViewItem({super.key});
-
+  const ListViewItem({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -11,11 +11,10 @@ class ListViewItem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.amber,
-          image: const DecorationImage(
+          image: DecorationImage(
             fit: BoxFit.fill,
-            image: AssetImage(
-              AssetsData.testImage,
+            image: NetworkImage(
+              imageUrl,
             ),
           ),
         ),

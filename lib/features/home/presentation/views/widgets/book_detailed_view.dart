@@ -34,7 +34,10 @@ class BookDetailedView extends StatelessWidget {
               ),
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.42,
-                child: const ListViewItem(),
+                child: const ListViewItem(
+                  imageUrl:
+                      'https://books.google.com/books/content?id=b-2oDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
+                ),
               ),
               const SizedBox(
                 height: 30,
